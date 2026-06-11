@@ -1,0 +1,360 @@
+/* ==========================================================================
+   1. RESET E TIPOGRAFIA GERAL
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #ffe18c; /* Fundo amarelo clássico do André Lanches */
+  font-family: Candara, Helvetica, sans-serif;
+  color: #333;
+  padding-bottom: 120px; /* Espaço para o bloco de entrega não cobrir o conteúdo */
+}
+
+/* ==========================================================================
+   2. CABEÇALHO & MENU (Flexbox Moderno)
+   ========================================================================== */
+#header {
+  background-color: #e50021; /* Vermelho clássico */
+  width: 100%;
+  padding: 15px 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+#logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Logo reduzido e reposicionado conforme a Parte 1 */
+#logoImg {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+#tituloLogo {
+  color: #ffffff;
+  font-size: 2.2rem;
+  margin: 0;
+  font-weight: 900; /* Deixa o texto bem grosso e moderno */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#menu {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.listaMenu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+/* Padronização exigida pelo professor */
+.listaMenu li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase; /* Todas as letras maiúsculas */
+  padding: 8px 16px;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.listaMenu li a:hover,
+.menuAtual {
+  color: #e50021 !important;
+  background-color: white !important;
+}
+
+/* ==========================================================================
+   3. CONTAINER PRINCIPAL (CONTENT)
+   ========================================================================== */
+#content {
+  width: 100%;
+  max-width: 800px;
+  background-color: white;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+#tituloConteudo {
+  color: #e50021;
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 2rem;
+}
+
+/* ==========================================================================
+   4. BANNER DE PROMOÇÃO
+   ========================================================================== */
+#promotionBanner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/images/promocao.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 40px;
+  margin-bottom: 30px;
+  color: white;
+}
+
+#promocaoH1 {
+  font-size: 2.5rem;
+  margin: 0;
+  text-shadow: 2px 2px 6px #e50021;
+}
+
+#promocaoValor {
+  font-size: 1.8rem;
+  margin: 5px 0 0 0;
+  text-shadow: 2px 2px 6px #e50021;
+  color: #ffe18c;
+}
+
+/* ==========================================================================
+   5. CARDÁPIO COM CSS GRID (Substituindo a antiga <table>)
+   ========================================================================== */
+.gridProdutos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  width: 100%;
+}
+
+.cardProduto {
+  background-color: #fff;
+  border: 1px solid #f0f0f0;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+  transition: transform 0.2s;
+}
+
+.cardProduto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(229, 0, 33, 0.15);
+}
+
+.tituloProduto {
+  color: #e50021;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.cardProduto img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #e50021;
+  margin-bottom: 12px;
+}
+
+.precoProduto {
+  color: #2b9348;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: #e8f5e9;
+  padding: 4px 15px;
+  border-radius: 20px;
+  margin-top: 5px;
+}
+
+/* ==========================================================================
+   6. PÁGINAS INTERNAS (Sobre Nós e Contato)
+   ========================================================================== */
+.pagina-interna {
+  padding: 10px;
+}
+
+.pagina-interna h1 {
+  color: #e50021;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #ffe18c;
+  padding-bottom: 5px;
+}
+
+.pagina-interna p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.form-contato {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.form-contato input,
+.form-contato textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.form-contato button {
+  background-color: #e50021;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.form-contato button:hover {
+  background-color: #b30019;
+}
+
+/* ==========================================================================
+   7. BLOCO DE ENTREGA FLUTUANTE
+   ========================================================================== */
+#entrega {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 1000;
+}
+
+#entrega img {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  border: 3px solid #e50021;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#tel {
+  background-color: #e50021;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+}
+
+#tel a {
+  color: white;
+  text-decoration: none;
+}
+
+#tel h4 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+#tel h5 {
+  margin: 2px 0 0 0;
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+/* ==========================================================================
+   8. RESPONSIVIDADE (Para Celulares)
+   ========================================================================== */
+@media (max-width: 768px) {
+  #header {
+    padding: 15px;
+  }
+  
+  #tituloLogo {
+    font-size: 1.8rem;
+  }
+
+  .listaMenu {
+    gap: 10px;
+  }
+
+  .listaMenu li a {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+  }
+
+  #content {
+    margin: 15px auto;
+    width: 95%;
+    padding: 15px;
+  }
+
+  #promotionBanner {
+    padding-left: 20px;
+    height: 160px;
+  }
+
+  #promocaoH1 {
+    font-size: 1.8rem;
+  }
+
+  #promocaoValor {
+    font-size: 1.3rem;
+  }
+
+  #entrega {
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 70px;
+    background-color: #e50021;
+    padding: 0 20px;
+    justify-content: center;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  #entrega img {
+    width: 45px;
+    height: 45px;
+    border: 2px solid white;
+  }
+
+  #tel {
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  #tel h4 {
+    font-size: 1.2rem;
+  }
+}
